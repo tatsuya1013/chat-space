@@ -8,7 +8,7 @@
 |email|string|null: false|
 
 ### Assosiation
-- has_many : members
+- has_and_belongs_to_many: group
 - has_many : messages
 
 ## groupテーブル
@@ -17,13 +17,13 @@
 |name|string|null: false|
 
 ### Association
-- has_many :members
+- has_and_belongs_to_many:user
 - has_many :messages
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|string||
 |group_id|integer|null: false ,foreign_key: true|
 |user_id|integer|null: false ,foreign_key: true|
