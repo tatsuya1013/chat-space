@@ -20,11 +20,11 @@
 - has_many :members
 - has_many :messages
 
-##messagesテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
-|image|string|a|
+|image|string||
 |group_id|integer|null: false ,foreign_key: true|
 |user_id|integer|null: false ,foreign_key: true|
 
