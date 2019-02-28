@@ -1,23 +1,25 @@
 #DB設計
 
-## userテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|email|string|null: false|
+|email|string|null: false ,unique :true|
 
 ### Assosiation
-- has_and_belongs_to_many: group
+- has_many:groups,through :members
+- has_many:members
 - has_many : messages
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false ,unique:true|
 
 ### Association
-- has_and_belongs_to_many:user
+- has_many:users ,through :membes
+- has_many:users
 - has_many :messages
 
 ## messagesテーブル
@@ -25,12 +27,12 @@
 |------|----|-------|
 |body|text||
 |image|string||
-|group_id|integer|null: false ,foreign_key: true|
-|user_id|integer|null: false ,foreign_key: true|
+|group_id|integer|refference :users ,index :ture,foreign_key: true|
+|user_id|integer|refference :groups ,index :true,foreign_key: true|
 
 ### Association
-- belongs_to :user
-- belongs_to :group
+- belongs_to :users
+- belongs_to :groups
 
 ## membersテーブル
 |Column|Type|Options|
@@ -39,5 +41,5 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :groups
+- belongs_to :users
