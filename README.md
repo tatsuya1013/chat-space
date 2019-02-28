@@ -31,8 +31,8 @@
 |user_id|integer|refference :groups ,index :true,foreign_key: true|
 
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
 ## membersテーブル
 |Column|Type|Options|
@@ -41,5 +41,5 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
