@@ -1,2 +1,48 @@
 @import "./reset";
 @import "./variable";
+
+.main-container{
+  height:100vh;
+}
+
+.side-box{
+  width:300px;
+  height:100%;
+  box-sizing: border-box;
+
+
+  &__header{
+  background-color:#253141;
+  height: 96px;
+    display: flex;
+  align-items: center;
+   p{
+    padding:0 20px;
+    color:white;
+   }
+  }
+
+  &__lists{
+    background-color:#2f3e51;
+    height:calc(100% - 96px);
+
+  &__lists__list{
+
+
+   }
+
+
+
+
+  }
+}
+
+.side-box__group-name p{
+  padding:20px 20px 5px 20px;
+  color:white;
+}
+
+.side-box__first-text p{
+  padding:0px 20px 20px 20px;
+  color:white;
+}
