@@ -9,22 +9,28 @@
   width:300px;
   height:100%;
   box-sizing: border-box;
+  float:left;
+  position: fixed !important;
+  position: absolute;
+
 
 
   &__header{
   background-color:#253141;
   height: 96px;
-    display: flex;
+  display: flex;
   align-items: center;
    p{
     padding:0 20px;
-    color:white;
+    color:#FFFFFF;
+    font-size:16px;
+    font-weight:bold;
    }
   }
 
   &__lists{
     background-color:#2f3e51;
-    height:calc(100% - 96px);
+    height:100%;
 
   &__lists__list{
 
@@ -39,10 +45,139 @@
 
 .side-box__group-name p{
   padding:20px 20px 5px 20px;
-  color:white;
+  font-size:15px;
+  font-weight: bold;
+  color:#FFFFFF;
 }
 
 .side-box__first-text p{
   padding:0px 20px 20px 20px;
-  color:white;
+  font-size:11px;
+  font-weight: bold;
+  color:#FFFFFF;
 }
+
+.main-box{
+  float:right;
+  width:calc(100vw - 300px);
+  height: 100%;
+  &__header{
+    position: fixed !important;
+    position: absolute;
+    border-bottom:1px solid #eeeeee;
+    height:96px;
+    width:calc(100vw - 300px);
+    background-color:white;
+    &--group-name{
+      padding-top:35px;
+      padding-left:40px;
+     p{
+        font-size:20px;
+        color:#333333;
+      }
+    }
+
+    &--member-name{
+      padding-top:15px;
+      padding-left:40px;
+      p{
+        font-size:12px;
+        color:#999999;
+      }
+     }
+
+     &--editbox{
+      float:right;
+      padding-top:28px;
+      padding-right:40px;
+      p{
+        height:40px;
+        border:1px solid blue;
+        padding:0px 20px 0px 20px;
+        display: flex;
+        align-items: center;
+
+
+      }
+
+     }
+
+  }
+
+}
+
+
+.main-box__header-left{
+  float:left;
+}
+
+.main-box__list{
+  padding-bottom: 100px;
+  padding-top:96px;
+  background-color:#fafafa;
+  height: calc(100% - 196px);
+  &__empty-box{
+    height:46px;
+  }
+  &__user-name p{
+    font-size:16px;
+    color:#434A54;
+    padding-left:40px;
+    padding-right:10px;
+    float:left;
+    font-weight: bold;
+  }
+  &__date-time p{
+    font-size:12px;
+    color:#999999;
+  }
+  &__text{
+    p{
+      font-size:14px;
+      color:#434A54;
+      padding-top:10px;
+      padding-bottom:40px;
+      padding-left:40px;
+    }
+  }
+}
+
+.main-box__list__footer{
+  height: 100px;
+  background-color:gray;
+  bottom: 0;
+  position: fixed !important;
+  position: absolute;
+  width:calc(100vw - 300px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+
+  &--form{
+
+  height: 50px;
+  width:100%;
+  background-color:white;
+  margin-left:40px;
+  margin-right:40px;
+
+
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
