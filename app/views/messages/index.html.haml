@@ -1,48 +1,56 @@
-.main-container
- .side-box
-  .side-box__header
-   %p test
+.wrapper
 
-  .side-box__lists
-   .side-box__lists__list
-    .side-box__group-name
-     %p aaaa
-    .side-box__first-text
-     %p iiii
+  = render 'shared/side_bar'
 
-
-
-
-
-
-
- .main-box
-  .main-box__header
-   .main-box__header-left
-    .main-box__header--group-name
-     %p test
-    .main-box__header--member-name
-     %p test
-   .main-box__header--editbox
-    %p Edit
-  .main-box__list
-   .main-box__list__empty-box
-   .main-box__list__detail-box
-   .main-box__list__user-name
-    %p test-user
-   .main-box__list__date-time
-    %p 2018/10/13
-   .main-box__list__text
-    %p こんにちは！
-
-
-
-
-
-  .main-box__list__footer
-   .main-box__list__footer--form
-    .main-box__list__footer--left
-     %p aaaa
-    .main-box__list__footer--right
-     %p send
-
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
+          Member：
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__button
+          Edit
+    .messages
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+    .form
+      %form
+        %input.form__message
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
