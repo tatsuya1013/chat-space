@@ -165,9 +165,33 @@
   margin-left:40px;
   margin-right:40px;
 
+  }
+
+.main-box__list__footer--left{
+
+  float:left;
+  background-color:red;
+
+}
+
+.main-box__list__footer--right{
+
+  float:right;
+  width:100px;
+  height:50px;
+  text-align:center;
+  background-color:green;
+
+
+
+  p{
+    display: inline-block;
+    width:100px;
 
 
   }
+
+}
 
 }
 
